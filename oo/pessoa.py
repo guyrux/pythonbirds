@@ -13,6 +13,11 @@ if __name__ == '__main__':
     pai = Pessoa(filho01, filho02, nome="José", idade=64)
     print(pai.cumprimentar())
     print(f"{pai.nome} tem {pai.idade} anos e {len(pai.filhos)} filhos.")
+
     for i, filho in enumerate(pai.filhos):
         print(f"O {i+1}º chama {filho.nome}.")
+
+    pai.sobrenome = "Souza"
+    print(pai.nome, pai.__dict__)
+    print(filho01.nome, filho01.__dict__)
 
