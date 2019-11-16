@@ -2,23 +2,19 @@ class Pessoa:
     # Atributos de classe ou atributo default
     olhos = 2
 
-
     # Atributos de instância
     def __init__(self, *filhos, nome="Gustavo", idade=35):
         self.idade = idade
         self.nome = nome
         self.filhos = list(filhos)
 
-
     # Método de instância
     def cumprimentar(self):
         return f"Olá, {self.nome}!"
 
-
     @staticmethod
     def metodo_estatico():
         return 42
-
 
     @classmethod
     def nome_e_atributos_de_classe(cls):
@@ -33,9 +29,9 @@ if __name__ == '__main__':
     print(f"{pai.nome} tem {pai.idade} anos e {len(pai.filhos)} filhos.")
 
     for i, filho in enumerate(pai.filhos):
-        print(f"O {i+1}º chama {filho.nome}.")
+        print(f"O {i + 1}º chama {filho.nome}.")
 
-    pai.sobrenome = "Souza" # Atributo criado dinamicamente
+    pai.sobrenome = "Souza"  # Atributo criado dinamicamente
     print(pai.nome, pai.__dict__)
     print(filho01.nome, filho01.__dict__)
 
