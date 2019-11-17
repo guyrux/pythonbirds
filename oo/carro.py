@@ -46,16 +46,16 @@
     >>> direcao.valor
     'Norte'
     >>> carro = Carro(direcao, motor)
-    >>> carro.calcular_velocidade()
+    >>> carro.calcular_velocidade
     0
     >>> carro.acelerar()
-    >>> carro.calcular_velocidade()
+    >>> carro.calcular_velocidade
     1
     >>> carro.acelerar()
-    >>> carro.calcular_velocidade()
+    >>> carro.calcular_velocidade
     2
     >>> carro.frear()
-    >>> carro.calcular_velocidade()
+    >>> carro.calcular_velocidade
     0
     >>> carro.calcular_direcao()
     'Norte'

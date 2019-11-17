@@ -10,7 +10,7 @@ class Pessoa:
 
     # Método de instância
     def cumprimentar(self):
-        return f"Olá, {self.nome}!"
+        return f"Olá, meu nome é {self.nome}!"
 
     @staticmethod
     def metodo_estatico():
@@ -21,9 +21,19 @@ class Pessoa:
         return f"{cls} - quantidade de olhos: {cls.olhos}"
 
 
+class Homem(Pessoa):
+    def cumprimentar(self):
+        cumprimentar_da_classe_pai = super().cumprimentar()
+        return f"{cumprimentar_da_classe_pai}. Aperto de Mão."
+
+
+class Mutante(Pessoa):
+    olhos = 3
+
+
 if __name__ == '__main__':
-    filho01 = Pessoa(nome="Gu", idade=34)
-    filho02 = Pessoa(nome="Gui", idade=32)
+    filho01 = Mutante(nome="Gu", idade=34)
+    filho02 = Homem(nome="Gui", idade=32)
     pai = Pessoa(filho01, filho02, nome="José", idade=64)
     print(pai.cumprimentar())
     print(f"{pai.nome} tem {pai.idade} anos e {len(pai.filhos)} filhos.")
@@ -37,3 +47,11 @@ if __name__ == '__main__':
 
     print(Pessoa.metodo_estatico(), pai.metodo_estatico())
     print(Pessoa.nome_e_atributos_de_classe(), pai.nome_e_atributos_de_classe())
+
+    pessoa = Homem("Anônimo")
+    print(isinstance(pessoa, Pessoa))
+
+    print(filho01.olhos)
+
+    print(pai.cumprimentar())
+    print(filho02.cumprimentar())
