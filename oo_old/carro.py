@@ -134,3 +134,14 @@ class Direcao():
             self.valor = "Leste"
         else:
             self.valor = "Norte"
+
+if __name__ == "__main__":
+    carro = Carro(direcao, motor)
+    print(carro.calcular_velocidade())
+    print(0)
+    carro.acelerar()
+    print(carro.calcular_velocidade())
+    print(1)
+    carro.acelerar()
+    print(carro.calcular_velocidade())
+    print(2)
